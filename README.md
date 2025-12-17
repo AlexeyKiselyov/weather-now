@@ -4,7 +4,7 @@ SPA weather application. Features city search with autocomplete, request caching
 
 ## Screenshot
 
-![App Screenshot](public/screenshot.png)
+<img src="public/screenshot.jpg" alt="App Screenshot" width="600" />
 
 ## Features
 
