@@ -1,0 +1,51 @@
+.appContainer {
+  width: 100%;
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px;
+
+  color: var(--font-color);
+
+  border-radius: 40px;
+
+  background-color: var(--bg-color);
+
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
+}
+
+@media screen and (max-height: 910px) {
+  .appContainer {
+    padding: 15px;
+  }
+}
+
+.appHeader {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.appHeader h1 {
+  font-size: clamp(1.5rem, calc(0.46rem + 5.22vw), 2.25rem);
+  color: var(--font-color);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
+}
+
+.mainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

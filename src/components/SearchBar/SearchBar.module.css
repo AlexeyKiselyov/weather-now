@@ -1,0 +1,152 @@
+.searchWrapper {
+  width: 100%;
+
+  margin-bottom: 2rem;
+
+  position: relative;
+}
+
+.searchForm {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 5px;
+
+  border-radius: 30px;
+
+  background: var(--bg-color);
+  box-shadow: inset 5px 5px 10px var(--shadow-dark),
+    inset -5px -5px 10px var(--shadow-light);
+}
+
+.searchInput {
+  min-width: 80px;
+
+  padding: 10px 25px;
+
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  font-size: clamp(1rem, calc(0.65rem + 1.74vw), 1.25rem);
+  color: var(--font-color);
+  font-family: inherit;
+
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  color: #a0a0a0;
+}
+
+.searchButton {
+  width: 45px;
+  height: 45px;
+
+  margin-right: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: var(--primary-color);
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--button-bg-color);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+
+  transition: all 0.2s ease;
+}
+
+.searchButton:hover {
+  color: #66b3ff;
+
+  box-shadow: 7px 7px 14px var(--shadow-dark),
+    -7px -7px 14px var(--shadow-light);
+}
+
+.searchButton:active {
+  transform: scale(0.95);
+
+  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
+}
+
+.spinning {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.suggestionsList {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  max-height: 250px;
+  padding: 10px 0px;
+
+  overflow-y: auto;
+
+  border-radius: 15px;
+
+  background: var(--bg-color);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+}
+
+.suggestionItem {
+  padding: 12px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  color: var(--font-color);
+  text-align: left;
+
+  transition: background 0.2s;
+}
+
+.suggestionItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.suggestionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cityName {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.cityLocation {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.flagIcon {
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}

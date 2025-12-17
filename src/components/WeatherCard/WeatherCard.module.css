@@ -1,0 +1,119 @@
+.card {
+  width: 100%;
+
+  padding: 2rem;
+
+  text-align: center;
+  color: var(--font-color);
+
+  border-radius: 30px;
+
+  background: var(--bg-color);
+  box-shadow: inset 5px 5px 10px var(--shadow-dark),
+    inset -5px -5px 10px var(--shadow-light);
+}
+
+@media screen and (max-height: 910px) {
+  .card {
+    padding: 1.2rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.city {
+  font-size: clamp(1.25rem, calc(-0.14rem + 6.96vw), 2.25rem);
+  font-weight: 700;
+  color: var(--font-color);
+  line-height: 1.2;
+}
+
+.locationInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a0a0a0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.flag {
+  height: 15px;
+  width: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.iconContainer {
+  aspect-ratio: 1/1;
+
+  height: 16dvh;
+  min-height: 110px;
+  max-height: 200px;
+
+  margin: 2rem auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary-color);
+
+  border-radius: 50%;
+
+  background: var(--bg-color);
+  box-shadow: 9px 9px 16px var(--shadow-dark),
+    -9px -9px 16px var(--shadow-light);
+}
+
+.temp {
+  font-size: clamp(1.25rem, calc(-1.36rem + 13.04vw), 3.13rem);
+  font-weight: 700;
+  color: var(--font-color);
+
+  text-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
+}
+
+.description {
+  margin-bottom: 5dvh;
+
+  font-size: clamp(1rem, calc(0.3rem + 3.48vw), 1.5rem);
+  text-transform: capitalize;
+  color: #6d6e74;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+
+  padding: 15px;
+
+  border-radius: 20px;
+
+  background: var(--bg-color);
+  box-shadow: 5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+}
+
+.detailItem span:first-child {
+  font-size: clamp(0.88rem, calc(0.7rem + 0.87vw), 1rem);
+  color: #6d6e74;
+}
+
+.detailItem span:last-child {
+  font-size: clamp(1rem, calc(0.65rem + 1.74vw), 1.25rem);
+  font-weight: 600;
+  color: var(--primary-color);
+}
